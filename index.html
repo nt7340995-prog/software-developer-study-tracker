@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Software Developer | My 40-Day Study Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <h1>💻 SOFTWARE DEVELOPER</h1>
+        <h2>📚 My Study Tracker</h2>
+        <p>Learn something new every day!</p>
+
+        <p class="subtitle">
+            16 Topics | 40 Days Each | Your Progress Matters 🚀
+        </p>
+    </header>
+
+
+    <!-- Overall Progress -->
+    <section class="overall-card">
+
+        <h2>🏆 Overall Progress</h2>
+
+        <div class="stats">
+
+            <div class="stat-box">
+                <h3 id="completedTopics">0</h3>
+                <p>Completed Topics</p>
+            </div>
+
+            <div class="stat-box">
+                <h3 id="completedDays">0 / 640</h3>
+                <p>Completed Days</p>
+            </div>
+
+            <div class="stat-box">
+                <h3 id="overallScore">0%</h3>
+                <p>Overall Score</p>
+            </div>
+
+        </div>
+
+        <div class="progress-background">
+            <div id="overallProgressBar" class="progress-bar"></div>
+        </div>
+
+        <p id="overallMessage">
+            Your journey starts today! 💪
+        </p>
+
+    </section>
+
+
+    <!-- Topic Selection -->
+    <section class="topic-section">
+
+        <h2>🎯 Choose Your Topic</h2>
+
+        <p class="section-description">
+            Select a topic to start its separate 40-day challenge.
+        </p>
+
+        <div id="topicList" class="topic-list"></div>
+
+    </section>
+
+
+    <!-- Selected Topic Tracker -->
+    <section class="tracker-card">
+
+        <div class="tracker-heading">
+
+            <div>
+                <p class="small-heading">YOUR CURRENT CHALLENGE</p>
+                <h2 id="currentTopic">Python</h2>
+            </div>
+
+            <div id="topicBadge" class="topic-badge">
+                Topic 1 of 16
+            </div>
+
+        </div>
+
+
+        <!-- Topic Statistics -->
+        <div class="topic-stats">
+
+            <div>
+                <span>✅ Completed</span>
+                <h3 id="topicCompleted">0 / 40</h3>
+            </div>
+
+            <div>
+                <span>📊 Score</span>
+                <h3 id="topicScore">0%</h3>
+            </div>
+
+            <div>
+                <span>⏳ Remaining</span>
+                <h3 id="topicRemaining">40 days</h3>
+            </div>
+
+        </div>
+
+
+        <!-- Topic Progress Bar -->
+        <div class="progress-background">
+            <div id="topicProgressBar" class="progress-bar"></div>
+        </div>
+
+        <p id="topicMessage">
+            Let's start your 40-day challenge! 🌟
+        </p>
+
+
+        <!-- 40 Clickable Days -->
+        <h3 class="days-heading">📅 Your 40-Day Challenge</h3>
+
+        <p class="tip">
+            💡 Click a day to select it and mark it completed.
+            Click it again to undo completion.
+        </p>
+
+        <div class="day-grid" id="dayGrid"></div>
+
+
+        <!-- Previous and Next Topic -->
+        <div class="navigation">
+
+            <button
+                type="button"
+                id="previousButton"
+                onclick="changeTopic(-1)"
+            >
+                ← Previous
+            </button>
+
+            <span id="navigationCount">1 / 16</span>
+
+            <button
+                type="button"
+                id="nextButton"
+                onclick="changeTopic(1)"
+            >
+                Next →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Separate Daily Notes -->
+    <section class="notes-card" id="dailyNotesSection">
+
+        <h2>📝 My Daily Study Notes</h2>
+
+        <p>
+            Current Topic:
+            <strong id="notesTopic">Python</strong>
+        </p>
+
+        <p>
+            Selected Day:
+            <strong id="notesDay">Day 1</strong>
+        </p>
+
+        <p>
+            Write what you learned on this day.
+            Each topic and day has its own separate notes.
+        </p>
+
+
+        <!-- Daily Notes Textarea -->
+        <textarea
+            id="notesPad"
+            rows="12"
+            placeholder="Date:
+
+What I studied today:
+
+1. Important concepts:
+
+2. What I understood:
+
+3. Code examples:
+
+4. Questions to revise:
+
+5. What I will learn tomorrow:"
+        ></textarea>
+
+
+        <!-- Save Daily Notes -->
+        <button
+            type="button"
+            id="saveNotesButton"
+        >
+            💾 Save Daily Notes
+        </button>
+
+        <p id="notesMessage" aria-live="polite">
+            Your notes are saved separately for each day.
+        </p>
+
+    </section>
+
+
+    <!-- Reset Current Topic -->
+    <button
+        type="button"
+        id="resetButton"
+        class="reset-button"
+    >
+        🔄 Reset Current Topic
+    </button>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            ✨ Stay consistent. Small steps lead to big achievements! ✨
+        </p>
+    </footer>
+
+</div>
+
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
+```

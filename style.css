@@ -1,0 +1,328 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Main Container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 25px 15px;
+    background-color: #111111;
+    border: 1px solid #333333;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #00e5ff;
+}
+
+header h2 {
+    color: #ffffff;
+}
+
+.subtitle {
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+/* Cards */
+.overall-card,
+.topic-section,
+.tracker-card,
+.notes-card {
+    background-color: #111111;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #333333;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.08);
+}
+
+/* Section Headings */
+h2,
+h3 {
+    color: #00e5ff;
+}
+
+p,
+span,
+label {
+    color: #eeeeee;
+}
+
+/* Statistics */
+.stats,
+.topic-stats {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.stat-box,
+.topic-stats > div {
+    flex: 1;
+    min-width: 130px;
+    padding: 20px;
+    text-align: center;
+    background-color: #1c1c1c;
+    border: 1px solid #333333;
+    border-radius: 12px;
+}
+
+.stat-box h3,
+.topic-stats h3 {
+    color: #00ff99;
+    font-size: 25px;
+}
+
+/* Topic List */
+.topic-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+.topic-list button {
+    padding: 15px;
+    background-color: #222222;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.topic-list button:hover,
+.topic-list button.active {
+    background-color: #00bcd4;
+    color: #000000;
+    border-color: #00e5ff;
+}
+
+/* Progress Bar */
+.progress-background {
+    width: 100%;
+    height: 14px;
+    background-color: #333333;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #00e5ff, #00ff99);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+/* Tracker Heading */
+.tracker-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.small-heading {
+    color: #aaaaaa;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.topic-badge {
+    background-color: #222222;
+    color: #00e5ff;
+    border: 1px solid #00e5ff;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+/* Day Grid */
+.day-grid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.day-grid button {
+    min-height: 55px;
+    background-color: #222222;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.day-grid button:hover {
+    background-color: #333333;
+    border-color: #00e5ff;
+}
+
+/* Completed Days */
+.day-grid button.completed {
+    background-color: #00ff99;
+    color: #000000;
+    border-color: #00ff99;
+    font-weight: bold;
+}
+
+/* Selected Day */
+.day-grid button.selected {
+    outline: 2px solid #00e5ff;
+    outline-offset: 2px;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+/* Buttons */
+button {
+    font-family: inherit;
+}
+
+.navigation button,
+#saveNotesButton,
+.reset-button {
+    padding: 12px 20px;
+    background-color: #00e5ff;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navigation button:hover,
+#saveNotesButton:hover {
+    background-color: #00ff99;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Daily Notes */
+.notes-card textarea {
+    display: block;
+    width: 100%;
+    min-height: 220px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+.notes-card textarea:focus {
+    outline: 2px solid #00e5ff;
+    border-color: #00e5ff;
+}
+
+/* Reset Button */
+.reset-button {
+    display: block;
+    margin: 20px auto;
+    background-color: #ff4d4d;
+    color: #ffffff;
+}
+
+.reset-button:hover {
+    background-color: #cc0000;
+}
+
+/* Tips and Messages */
+.tip {
+    background-color: #1c1c1c;
+    padding: 12px;
+    border-left: 4px solid #00e5ff;
+    border-radius: 5px;
+}
+
+#overallMessage,
+#topicMessage,
+#notesMessage {
+    color: #00ff99;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaaaaa;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .overall-card,
+    .topic-section,
+    .tracker-card,
+    .notes-card {
+        padding: 15px;
+    }
+
+    .day-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .day-grid button {
+        min-height: 50px;
+    }
+
+    .stats,
+    .topic-stats {
+        gap: 10px;
+    }
+
+    .stat-box,
+    .topic-stats > div {
+        min-width: 100px;
+        padding: 12px;
+    }
+
+    .navigation button {
+        padding: 10px;
+    }
+}
